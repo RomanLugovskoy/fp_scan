@@ -1,0 +1,527 @@
+@import "../../variables.scss";
+
+.button {
+  @include button-style();
+}
+
+.button.grey {
+  @include button-style(#d2d2d2, $scanBlack);
+}
+
+.articleCard {
+  display: flex;
+  flex-direction: column;
+  width: 630px;
+  height: 694px;
+  padding: 30px;
+  box-shadow: 0px 0px 10px 0px #00000033;
+  border-radius: 10px;
+}
+
+.articleInfo {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+.articleDate,
+.articleSource {
+  font-size: 16px;
+  color: #949494;
+}
+
+.articleSource {
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.articleTitle {
+  margin: 0;
+  font-size: 26px;
+  font-family: "InterMedium", sans-serif;
+  margin-bottom: 10px;
+  min-height: 100px;
+}
+
+.tag {
+  width: 157px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: "InterRegular", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  background-color: $scanYellow;
+}
+
+.articlePicture {
+  min-width: 581px;
+  min-height: 158px;
+  max-width: 581px;
+  max-height: 158px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.articleContent {
+  flex-grow: 1;
+  font-family: "InterRegular", sans-serif;
+  font-size: 16px;
+  min-height: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.articleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.readMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $scanBlue;
+  color: black;
+  width: 223px;
+  height: 46.54px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.articleFooter .readMore:hover {
+  cursor: pointer;
+  background-color: $scanYellow;
+  color: $scanBlack;
+}
+
+.wordCount {
+  font-size: 16px;
+  opacity: 0.5;
+  margin-top: 15px;
+}
+
+.articleCardsBlock {
+  margin-right: 60px;
+  margin-left: 60px;
+  width: 1346px;
+}
+
+.h2SearchResultsPageArticles {
+  font-family: Ferry;
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+.articleCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  margin-bottom: 0;
+}
+
+.showMore {
+  width: 305px;
+}
+
+.searchResultsContent {
+  width: 100%;
+  background-color: $scanWhite;
+  padding-top: 123px;
+  max-width: 1440px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.h1SearchResultsPage {
+  font-size: 40px;
+}
+
+.pSearchResultsPageTitleBlock {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.searchResultsTitleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 20px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.searchResultsLargePicture {
+  height: 369px;
+  margin-bottom: -40px;
+}
+
+.h2SearchResultsPage {
+  font-family: Ferry;
+  font-size: 36px;
+}
+
+.generalSummaryBlock {
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.pGeneralSummaryTitleBlock {
+  font-family: InterRegular, sans-serif;
+  font-size: 18px;
+  color: #949494;
+}
+
+.generalSummaryBlock {
+  margin-bottom: 60px;
+}
+
+.tableAndArrowsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1346px;
+  margin: 0 auto;
+}
+
+.tableWrapperMain {
+  display: flex;
+  align-items: center;
+  max-width: 1260px;
+  min-width: 1260px;
+  border: 2px solid $scanGreen;
+  border-radius: 10px;
+  min-height: 158px;
+  max-height: 158px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tableWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tableHeaders {
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $scanGreen;
+  color: white;
+}
+
+.tableData {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.tableHeaders > div,
+.dataRow > div {
+  min-width: 133px;
+  padding: 17.5px;
+  text-align: center;
+}
+
+.dataCell,
+.headerTotal,
+.headerPeriod,
+.headerRisks {
+  flex: 1;
+  padding: 17.5px;
+}
+
+.divider {
+  height: 124px;
+  width: 2px;
+  background-color: #949494;
+  opacity: 0.4;
+  margin: auto 0;
+}
+
+.scrollBtn {
+  width: 39px;
+  height: 39px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("../../assets/images/arrow_right_icon_why_us_carousel.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.scrollBtn.left {
+  transform: scaleX(-1);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tableDataLoading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 430px;
+}
+
+.loadingIconGeneralSummary {
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  animation: spin 2s linear infinite;
+}
+
+.loadingSign {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.error500Message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 200px;
+}
+
+@media (max-width: 1360px) {
+  .searchResultsContent {
+    max-width: 375px;
+    margin-bottom: 40px;
+  }
+
+  .h1SearchResultsPage {
+    font-size: 28px;
+  }
+
+  .pSearchResultsPageTitleBlock {
+    font-size: 18px;
+    padding-top: 5px;
+  }
+
+  .searchResultsTitleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .searchResultsLargePicture {
+    height: 233.73px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+
+  .h2SearchResultsPage {
+    font-size: 28px;
+  }
+
+  .generalSummaryBlock {
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .pGeneralSummaryTitleBlock {
+    font-size: 18px;
+  }
+  .articleCard {
+    width: 345px;
+    height: 694px;
+    padding: 14px;
+  }
+
+  .articleDate,
+  .articleSource {
+    font-size: 14px;
+  }
+
+  .articleSource {
+    margin-left: 10px;
+  }
+
+  .articleTitle {
+    font-size: 19px;
+    margin-bottom: 20px;
+    min-height: 100px;
+  }
+
+  .articlePicture {
+    min-width: 315px;
+    min-height: 158px;
+    max-width: 315px;
+    max-height: 158px;
+  }
+
+  .articleContent {
+    font-size: 12px;
+    min-height: 220px;
+    max-height: 220px;
+    width: 315px;
+    -webkit-line-clamp: 10;
+  }
+
+  .readMore {
+    width: 195px;
+    height: 40.7px;
+    font-size: 14px;
+  }
+
+  .wordCount {
+    font-size: 14px;
+    margin-top: 26px;
+  }
+  .articleCardsBlock {
+    margin-right: 14px;
+    margin-left: 14px;
+    width: 335px;
+  }
+
+  .h2SearchResultsPageArticles {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .articleCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .buttonDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  .showMore {
+    width: 335px;
+  }
+  .generalSummaryBlock {
+    margin-top: 0px;
+  }
+
+  .tableAndArrowsContainer {
+    width: 350px;
+    margin: 0;
+  }
+
+  .tableWrapperMain {
+    display: block;
+    max-width: 298px;
+    width: 298px;
+    min-width: 298px;
+    max-height: 140px;
+    height: 140px;
+    min-height: 140px;
+  }
+
+  .tableWrapper {
+    width: 298px;
+  }
+
+  .tableHeaders,
+  .tableData {
+    display: flex;
+    width: 100%;
+  }
+
+  .tableHeaders {
+    display: flex;
+    flex-direction: row;
+    background-color: $scanGreen;
+    color: white;
+    height: 75px;
+    width: 298px;
+    margin-left: -2px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .tableHeaders > div,
+  .dataRow > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 99.333333px;
+    text-align: center;
+  }
+
+  .tableData {
+    display: flex;
+  }
+
+  .dataRow {
+    display: flex;
+    flex-direction: row;
+    max-width: 298px;
+    min-width: 298px;
+    width: 298px;
+  }
+
+  .divider {
+    display: none;
+    visibility: hidden;
+  }
+
+  .tableDataLoading {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .loadingIconGeneralSummary {
+    width: 36px;
+    height: 36px;
+  }
+
+  .loadingSign {
+    display: none;
+  }
+
+  .error500Message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,303 @@
+@import "../../../variables.scss";
+
+.tariffsBlock {
+  background-color: $scanWhite;
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1440px;
+  margin-bottom: 100px;
+}
+
+.tariffsCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media (max-width: 1360px) {
+  .tariffsBlock {
+    padding: 0 14px;
+    max-width: 375px;
+    margin-bottom: 30px;
+  }
+
+  .tariffsCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+.tariffCard {
+  width: 415px;
+  height: 540px;
+  max-height: 540px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #00000033;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tariffColoredBlock {
+  max-height: 132px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tariffBeginnerYellowActive {
+  border: 2px solid $scanYellow;
+}
+
+.tariffProLightBlueActive {
+  border: 2px solid $scanBlue;
+}
+
+.tariffBusinessBlackActive {
+  border: 2px solid $scanBlack;
+}
+
+.tariffBeginnerYellow {
+  background-color: $scanYellow;
+}
+
+.tariffProLightBlue {
+  background-color: $scanBlue;
+}
+
+.tariffBusinessBlack {
+  background-color: $scanBlack;
+}
+
+.tariffNameBlock {
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.tariffNameBlock h3 {
+  margin: 0;
+  color: $scanBlack;
+  font-family: "InterMedium", sans-serif;
+  font-size: 30px;
+}
+
+.tariffNameBlock p {
+  color: $scanBlack;
+  font-size: 16px;
+  white-space: nowrap;
+  max-width: 90%;
+}
+
+.tariffIconBlock {
+  max-width: 100px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tariffIcon {
+  width: auto;
+  height: auto;
+}
+
+.tariffCardTextBlock {
+  align-self: flex-start;
+  width: 100%;
+  height: 80px;
+  padding-left: 30px;
+}
+
+.yourTariffBlock {
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 12px;
+  margin-bottom: -10px;
+}
+
+.yourTariffBadge {
+  width: 134px;
+  height: 24px;
+  background-color: #3ba5e0;
+  border-radius: 10px;
+  color: $scanBlack;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tariffPriceBlock {
+  margin-bottom: 30px;
+}
+
+.tariffPrices {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.tariffPrices h3 {
+  color: $scanBlack;
+  font-family: "InterMedium", sans-serif;
+  font-size: 30px;
+}
+
+.lastPriceTag {
+  text-decoration: line-through;
+  font-family: "InterMedium", sans-serif;
+  font-size: 25px;
+  color: #d2d2d2;
+}
+
+.tariffPrices h3,
+.lastPriceTag {
+  margin: 0;
+}
+
+.cardText {
+  color: $scanBlack;
+  font-size: 18px;
+}
+
+.cardText20px {
+  font-size: 20px;
+  font-family: "InterMedium", sans-serif;
+  margin-left: -10px;
+}
+
+.installmentText {
+  margin-top: -30px;
+  font-size: 18px;
+}
+
+.tariffToIncludeLines {
+  display: flex;
+  font-family: "InterRegular", sans-serif;
+  font-size: 18px;
+  align-items: center;
+  margin-bottom: -30px;
+  margin-top: -20px;
+  margin-left: -12px;
+}
+
+.greenCheckbox {
+  margin-right: 10px;
+  width: 24px;
+  height: auto;
+}
+
+.tariffButtonDiv {
+  margin-top: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTariffs {
+  width: 335px;
+  height: 59px;
+  border-radius: 5px;
+  font-family: "InterRegular", sans-serif;
+  font-size: 22px;
+  color: $scanWhite;
+  background-color: $scanDarkBlue;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.buttonTariffs.grey {
+  background-color: #d2d2d2;
+  color: $scanBlack;
+}
+
+.buttonTariffs:not(:disabled):hover {
+  cursor: pointer;
+  background-color: $scanBlue;
+  color: $scanBlack;
+}
+
+@media (max-width: 1360px) {
+  .tariffCard {
+    width: 335px;
+    min-width: 335px;
+    height: 512px;
+    max-height: 512px;
+  }
+
+  .tariffColoredBlock {
+    min-height: 135px;
+    max-height: 135px;
+    padding: 15px;
+  }
+
+  .tariffNameBlock {
+    margin-top: 60px;
+  }
+
+  .tariffNameBlock h3 {
+    font-size: 20px;
+    margin-bottom: -10px;
+  }
+
+  .tariffNameBlock p {
+    font-size: 16px;
+  }
+
+  .tariffIconBlock {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 35px;
+    margin-left: -20px;
+    padding-right: 40px;
+  }
+
+  .tariffCardTextBlock {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    min-height: 70px;
+  }
+
+  .cardText {
+    font-size: 16px;
+  }
+
+  .cardText20px {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .installmentText {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  .tariffToIncludeLines {
+    margin-left: 20px;
+  }
+
+  .tariffButtonDiv {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+
+  .buttonTariffs {
+    width: 286.57px;
+    height: 59px;
+    font-size: 18px;
+  }
+}

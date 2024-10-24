@@ -1,0 +1,100 @@
+@import "../../../variables.scss";
+
+.userBlocks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 388px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingIcon {
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  animation: spin 2s linear infinite;
+}
+
+.regBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 251px;
+}
+
+.login {
+  opacity: 0.5;
+}
+
+.login:hover {
+  opacity: 1;
+}
+
+.loginButton {
+  width: 65px;
+  flex: 0 0 65px;
+  height: 26px;
+  border-radius: 5px;
+  background-color: $scanBlue;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  cursor: pointer;
+  background-color: $scanDarkBlue;
+  color: $scanWhite;
+}
+
+.verticalDivider {
+  box-sizing: content-box;
+  flex: 0 0 2px;
+  height: 26px;
+  background-color: $scanGreen;
+  border: none;
+  opacity: 0.6;
+  margin-right: 20px;
+  margin-left: 20px;
+  z-index: 1;
+}
+
+@media (max-width: 1360px) {
+  .userBlocks {
+    min-width: auto;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  .regBlock {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .loginButton {
+    width: 300px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  .login {
+    color: $scanBlue;
+  }
+
+  .regBlock {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex: 0 0 251px;
+  }
+}

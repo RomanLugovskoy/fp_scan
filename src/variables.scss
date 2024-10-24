@@ -1,0 +1,28 @@
+$scanGreen: #029491;
+$scanBlack: #000000;
+$scanWhite: #ffffff;
+$scanYellow: #ffb64f;
+$scanBlue: #7ce3e1;
+$scanDarkBlue: #5970ff;
+
+@mixin button-style($bg-color: $scanDarkBlue, $text-color: $scanWhite) {
+  width: 335px;
+  height: 59px;
+  border-radius: 5px;
+  font-family: "InterRegular", sans-serif;
+  font-size: 22px;
+  color: $text-color;
+  background-color: $bg-color;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:not(:disabled):hover {
+    cursor: pointer;
+    background-color: $scanBlue;
+    color: $scanBlack;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

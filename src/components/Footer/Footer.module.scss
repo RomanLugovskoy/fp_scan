@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+footer {
+  width: 100%;
+  background-color: $scanGreen;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 137px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 45px 25px;
+}
+.footerLink {
+  display: block;
+  color: $scanWhite;
+  &:hover {
+    color: $scanBlue;
+  }
+}
+.addressBlock {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: $scanWhite;
+}
+
+@media (max-width: 1360px) {
+  .footerContent {
+    max-width: 375px;
+    padding: 0 20px;
+  }
+}

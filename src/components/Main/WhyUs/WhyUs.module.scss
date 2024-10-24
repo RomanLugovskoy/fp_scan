@@ -1,0 +1,104 @@
+@import "../../../variables.scss";
+
+.whyUsBlock {
+  background-color: $scanWhite;
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1440px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.whyUsLargeImage {
+  width: 1307px;
+  height: 575.52px;
+  margin-top: 60px;
+}
+
+.carousel {
+  display: flex;
+  max-width: 1440px;
+  min-width: 1300px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto 0;
+}
+
+.carouselContent {
+  display: flex;
+  min-width: 1240px;
+  justify-content: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselContent::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselItem {
+  flex: 0 0 400px;
+  height: 225px;
+  margin: 7px;
+  padding: 20px;
+  padding-top: 25px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #00000033;
+  font-size: 18px;
+}
+
+.carouselArrow {
+  cursor: pointer;
+  width: 39px;
+  height: 39px;
+}
+
+.leftArrow {
+  transform: scaleX(-1);
+}
+
+.whyUsIcon {
+  width: 64px;
+  height: 64px;
+}
+
+@media (max-width: 1360px) {
+  .whyUsBlock {
+    padding: 0 14px;
+    max-width: 375px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .whyUsImageContainer {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .whyUsLargeImage {
+    width: auto;
+    height: 392px;
+    margin-top: 50px;
+  }
+
+  .carousel {
+    max-width: 375px;
+    min-width: 350px;
+    width: 100%;
+    margin: 14px auto 0;
+  }
+
+  .carouselContent {
+    min-width: 300px;
+  }
+
+  .carouselItem {
+    flex: 0 0 290px;
+    height: 188px;
+    padding: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+  }
+}

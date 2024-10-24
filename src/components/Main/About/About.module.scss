@@ -1,0 +1,79 @@
+@import "../../../variables.scss";
+
+.aboutBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  background-color: $scanWhite;
+  margin: 0 auto;
+  padding: 0 60px;
+  max-width: 1440px;
+}
+
+.aboutInfoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aboutH1Box {
+  width: 743px;
+  height: 288px;
+}
+
+.aboutPBox {
+  width: 534px;
+  height: 48px;
+  margin-top: -20px;
+  margin-bottom: 80px;
+  font-size: 20px;
+}
+
+.aboutImage {
+  width: 629px;
+  height: 620px;
+}
+
+.button {
+  @include button-style();
+}
+
+.button.grey {
+  @include button-style(#d2d2d2, $scanBlack);
+}
+
+@media (max-width: 1360px) {
+  .aboutBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 0 14px;
+    max-width: 375px;
+  }
+
+  .aboutInfoBlock {
+    margin-bottom: 14px;
+  }
+
+  .aboutH1Box {
+    width: 360px;
+    height: 150px;
+  }
+
+  .aboutPBox {
+    width: 310px;
+    height: 66px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .aboutImage {
+    width: 347px;
+    height: auto;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+}

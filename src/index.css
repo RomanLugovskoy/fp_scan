@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Ferry";
+  src: local("Ferry"), url("/fonts/ferry.woff2") format("woff2"),
+    url("/fonts/ferry.woff") format("woff");
+}
+
+@font-face {
+  font-family: "InterRegular";
+  src: local("InterRegular"), url("/fonts/InterRegular.woff2") format("woff2"),
+    url("/fonts/InterRegular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "InterMedium";
+  src: local("InterMedium"), url("/fonts/InterMedium.woff2") format("woff2"),
+    url("/fonts/InterMedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "InterBold";
+  src: local("InterBold"), url("/fonts/InterBold.woff2") format("woff2"),
+    url("/fonts/InterBold.woff") format("woff");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}

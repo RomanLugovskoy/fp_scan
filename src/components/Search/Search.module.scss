@@ -1,0 +1,357 @@
+@import "../../variables.scss";
+
+.searchContent {
+  width: 100%;
+  background-color: $scanWhite;
+  padding-top: 123px;
+  max-width: 1440px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.h1SearchPage {
+  font-size: 40px;
+}
+
+.pSearchPageTitleBlock {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.searchTitleBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.searchPageSmallPictureSheet {
+  margin-left: 110px;
+}
+
+.searchPageSmallPictureFolders {
+  margin-right: 30px;
+}
+
+.searchBlock {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-right: 0;
+  margin-left: 60px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 872px;
+  height: 543px;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #00000033;
+}
+
+.leftPartSearchForm {
+  width: 435px;
+  padding: 20px;
+}
+
+.formField {
+  margin-bottom: 30px;
+}
+
+.formField label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.formField input[type="text"],
+.formField input[type="date"],
+.formField input[type="number"],
+.formField option,
+.formField select {
+  font-family: "InterRegular", sans-serif;
+  width: 242px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px 0px #00000011;
+}
+
+.formFieldInputs {
+  max-height: 82px;
+  min-height: 82px;
+}
+
+.inputError {
+  text-align: center;
+  color: #949494;
+}
+
+.formField input:focus,
+.formField option:focus,
+.formField select:focus {
+  outline: 1px solid $scanGreen;
+  border-color: $scanGreen;
+}
+
+.formField .errorMessage {
+  color: #ff5959;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  width: 242px;
+}
+
+.formField input.inputError,
+.formField select.inputError {
+  border: 1px solid #ff5959;
+  outline-color: #ff5959;
+  color: #ff5959;
+}
+
+.formField input.error,
+.formField select.error {
+  border: 1px solid #ff5959;
+  outline-color: #ff5959;
+}
+
+.rightPartSearchForm {
+  display: flex;
+  flex-direction: column;
+  width: 435px;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.rightPartSubmitButtonBlock {
+  justify-content: right;
+  align-items: center;
+  margin-top: 138px;
+  margin-left: 40px;
+}
+
+.starMessage {
+  text-align: left;
+  color: #949494;
+}
+
+.requiredAsterisk {
+  color: $scanBlack;
+  font-family: InterRegular, sans-serif;
+  font-size: 25px;
+}
+
+.requiredAsterisk.error {
+  color: #ff5959;
+  font-family: InterRegular, sans-serif;
+  font-size: 25px;
+}
+
+.dateInputContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.formFieldDateInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.dateErrorMessage {
+  color: #ff5959;
+  font-size: 14px;
+  text-align: center;
+  width: 395px;
+  visibility: hidden;
+}
+
+.formFieldDateInputs .error {
+  visibility: visible;
+}
+
+.error {
+  text-align: center;
+  color: #949494;
+}
+
+.dateInputContainer {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.reactDatepickerWrapper,
+.reactDatepickerInputContainer {
+  width: 100%;
+}
+
+.reactDatepickerInputContainer input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.reactDatepicker {
+  font-size: 16px;
+}
+
+.formField select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.selectWrapper {
+  position: relative;
+  display: inline-block;
+  width: 242px;
+  cursor: pointer;
+}
+
+.selectWrapper:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url("../../assets/images/fallout-arrow.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+.button {
+  @include button-style();
+}
+
+.button.grey {
+  @include button-style(#d2d2d2, $scanBlack);
+}
+
+@media (max-width: 1360px) {
+  .selectWrapper {
+    width: 335px;
+  }
+
+  .dateInputContainer {
+    flex-direction: column;
+  }
+
+  .dateErrorMessage {
+    width: 335px;
+  }
+
+  .searchContent {
+    padding-top: 100px;
+    max-width: 375px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .h1SearchPage {
+    font-size: 28px;
+  }
+
+  .pSearchPageTitleBlock {
+    font-size: 18px;
+    padding-top: 20px;
+  }
+
+  .searchTitleBlock {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    max-width: 357px;
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .searchPageSmallPictureSheet {
+    margin-left: 0px;
+    width: 58.24px;
+    height: 71.12px;
+    margin-bottom: 80px;
+  }
+
+  .searchPageSmallPictureFolders {
+    display: none;
+  }
+
+  .searchBlock {
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 14px;
+    margin-left: 14px;
+  }
+
+  .searchForm {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 688px;
+    padding: 6px 14px;
+    align-items: center;
+  }
+
+  .leftPartSearchForm {
+    width: 355px;
+    padding: 10px;
+    margin-bottom: -20px;
+  }
+
+  .formField {
+    margin-bottom: 30px;
+  }
+
+  .formField input[type="text"],
+  .formField input[type="date"],
+  .formField input[type="number"],
+  .formField option,
+  .formField select {
+    width: 335px;
+  }
+
+  .formField .errorMessage {
+    width: 335px;
+  }
+
+  .rightPartSearchForm {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    padding: 20px;
+  }
+
+  .rightPartSubmitButtonBlock {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-left: -20px;
+  }
+
+  .searchPageLargePicture {
+    height: 403.28px;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+}
