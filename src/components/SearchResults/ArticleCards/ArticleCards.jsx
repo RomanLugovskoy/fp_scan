@@ -42,7 +42,10 @@ function ArticleCards({ documentsData }) {
       </div>
       {displayedArticles < articles.length && (
         <div className={style.buttonDiv}>
-          <button className={style.buttonShowMore} onClick={showMoreArticles}>
+          <button
+            className={`${style.button} ${style.showMore}`}
+            onClick={showMoreArticles}
+          >
             Показать больше
           </button>
         </div>
