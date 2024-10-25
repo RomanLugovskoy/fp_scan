@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import style from "../Search.module.scss";
 
 const DocumentCount = ({ documentCount, setDocumentCount }) => {
   const [error, setError] = useState("");
+  const [touched, setTouched] = useState(false);
 
   const validateDocumentCount = () => {
     const count = parseInt(documentCount, 10);
@@ -18,9 +19,18 @@ const DocumentCount = ({ documentCount, setDocumentCount }) => {
     }
   };
 
-  useEffect(() => {
+  const handleBlur = () => {
+    setTouched(true);
     validateDocumentCount();
-  }, [documentCount]);
+  };
+
+  const handleChange = (e) => {
+    const newValue = e.target.value;
+    setDocumentCount(newValue);
+    if (error) {
+      setError("");
+    }
+  };
 
   return (
     <div className={`${style.formField} ${style.formFieldInputs}`}>
@@ -28,7 +38,7 @@ const DocumentCount = ({ documentCount, setDocumentCount }) => {
         Количество документов в выдаче
         <span
           className={
-            error
+            error && touched
               ? `${style.requiredAsterisk} ${style.error}`
               : style.requiredAsterisk
           }
@@ -42,15 +52,11 @@ const DocumentCount = ({ documentCount, setDocumentCount }) => {
         name="documentCount"
         className={error ? style.inputError : ""}
         value={documentCount}
-        onChange={(e) => {
-          const newValue = e.target.value;
-          setDocumentCount(newValue);
-          validateDocumentCount();
-        }}
-        onBlur={validateDocumentCount}
+        onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="от 1 до 1000"
       />
-      {error && <div className={style.errorMessage}>{error}</div>}
+      {error && touched && <div className={style.errorMessage}>{error}</div>}
     </div>
   );
 };

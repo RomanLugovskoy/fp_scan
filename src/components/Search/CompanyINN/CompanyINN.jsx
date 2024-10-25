@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import style from "../Search.module.scss";
 
 const CompanyINN = ({ companyINN, setCompanyINN }) => {
   const [error, setError] = useState("");
+
+  const [touched, setTouched] = useState(false);
 
   const validateInn = (inn) => {
     let errorObj = { code: 0, message: "" };
@@ -58,9 +60,18 @@ const CompanyINN = ({ companyINN, setCompanyINN }) => {
     return result;
   };
 
-  useEffect(() => {
+  const handleBlur = () => {
+    setTouched(true);
     validateInn(companyINN);
-  }, [companyINN]);
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setCompanyINN(value);
+    if (error) {
+      setError("");
+    }
+  };
 
   return (
     <div className={`${style.formField} ${style.formFieldInputs}`}>
@@ -68,7 +79,7 @@ const CompanyINN = ({ companyINN, setCompanyINN }) => {
         ИНН компании{" "}
         <span
           className={
-            error
+            error && touched
               ? `${style.requiredAsterisk} ${style.error}`
               : style.requiredAsterisk
           }
@@ -80,13 +91,13 @@ const CompanyINN = ({ companyINN, setCompanyINN }) => {
         type="text"
         id="companyINN"
         name="companyINN"
-        className={error ? style.inputError : ""}
+        className={error && touched ? style.inputError : ""}
         value={companyINN}
-        onChange={(e) => setCompanyINN(e.target.value)}
-        onBlur={() => validateInn(companyINN)}
+        onChange={handleChange}
+        onBlur={handleBlur}
         placeholder="10 или 12 цифр"
       />
-      {error && <div className={style.errorMessage}>{error}</div>}
+      {error && touched && <div className={style.errorMessage}>{error}</div>}
     </div>
   );
 };

@@ -6,6 +6,9 @@ const DateInput = ({ startDate, setStartDate, endDate, setEndDate }) => {
   const [inputTypeStart, setInputTypeStart] = useState("text");
   const [inputTypeEnd, setInputTypeEnd] = useState("text");
 
+  const [touchedStart, setTouchedStart] = useState(false);
+  const [touchedEnd, setTouchedEnd] = useState(false);
+
   useEffect(() => {
     validateDateRange();
   }, [startDate, endDate]);
@@ -34,7 +37,7 @@ const DateInput = ({ startDate, setStartDate, endDate, setEndDate }) => {
         Диапазон поиска{" "}
         <span
           className={
-            error
+            error && (touchedStart || touchedEnd)
               ? `${style.requiredAsterisk} ${style.error}`
               : style.requiredAsterisk
           }
@@ -46,7 +49,10 @@ const DateInput = ({ startDate, setStartDate, endDate, setEndDate }) => {
         <div className={style.dateInputContainer}>
           <input
             type={inputTypeStart}
-            onFocus={() => setInputTypeStart("date")}
+            onFocus={() => {
+              setInputTypeStart("date");
+              setTouchedStart(true);
+            }}
             onBlur={() => {
               validateDateRange();
               if (!startDate) setInputTypeStart("text");
@@ -56,11 +62,14 @@ const DateInput = ({ startDate, setStartDate, endDate, setEndDate }) => {
             placeholder="Дата начала"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-            className={error ? style.error : ""}
+            className={error && touchedStart ? style.error : ""}
           />
           <input
             type={inputTypeEnd}
-            onFocus={() => setInputTypeEnd("date")}
+            onFocus={() => {
+              setInputTypeEnd("date");
+              setTouchedEnd(true);
+            }}
             onBlur={() => {
               validateDateRange();
               if (!endDate) setInputTypeEnd("text");
@@ -70,10 +79,10 @@ const DateInput = ({ startDate, setStartDate, endDate, setEndDate }) => {
             placeholder="Дата конца"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
-            className={error ? style.error : ""}
+            className={error && touchedStart ? style.error : ""}
           />
         </div>
-        {error && (
+        {error && (touchedStart || touchedEnd) && (
           <div className={`${style.dateErrorMessage} ${style.error}`}>
             {error}
           </div>
