@@ -118,7 +118,10 @@ const Authorization = () => {
                 value={username}
                 onChange={handleUsernameChange}
                 required
-                style={{ borderColor: usernameError ? "red" : "" }}
+                style={{
+                  borderColor: usernameError ? "red" : "",
+                  outline: usernameError ? "none" : "",
+                }}
               />
               {usernameError && (
                 <div className={style.authFormError}>
@@ -137,7 +140,10 @@ const Authorization = () => {
                 onChange={handlePasswordChange}
                 autoComplete="current-password"
                 required
-                style={{ borderColor: passwordError ? "red" : "" }}
+                style={{
+                  borderColor: passwordError ? "red" : "",
+                  outline: passwordError ? "none" : "",
+                }}
               />
               {passwordError && (
                 <div className={style.authFormError}>

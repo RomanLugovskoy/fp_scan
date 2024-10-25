@@ -83,6 +83,7 @@
 
 .tab.active {
   border-color: $scanGreen;
+  color: $scanGreen;
 }
 
 .inactive {
@@ -111,7 +112,7 @@
 .authForm input[type="password"] {
   width: 379px;
   height: 43px;
-  padding: 8px;
+  padding: 8px 15px;
   border: 1px solid #c7c7c7;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px #00000011;
@@ -121,7 +122,6 @@
   outline: 1px solid $scanGreen;
   border-color: $scanGreen;
   font-size: 16px;
-  padding-left: 20px;
 }
 
 .authButtonDiv {
@@ -130,7 +130,7 @@
 }
 
 .authButton {
-  width: 305px;
+  width: 379px;
 }
 
 .authFormError {
@@ -145,7 +145,7 @@
   margin-bottom: 14px;
   text-align: center;
   text-decoration: underline;
-  color: $scanBlue;
+  color: $scanDarkBlue;
   margin-top: 10px;
 }
 
@@ -278,7 +278,9 @@ input {
     margin-top: 30px;
     text-align: center;
   }
-
+  .authButton {
+    width: 305px;
+  }
   .authFormError {
     font-size: 12px;
   }
